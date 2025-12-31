@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Code, ShoppingBag, Shield, ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
-import Logo from "@/components/Logo";
 import ServiceCard from "@/components/ServiceCard";
 import ExpertiseStat from "@/components/ExpertiseStat";
 import TestimonialCard from "@/components/TestimonialCard";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
+import AnimatedHero from "@/components/AnimatedHero";
 
 const services = [
   {
@@ -59,68 +59,9 @@ const Index = () => {
         description="Expert web development services for growing businesses. We build high-performance, responsive websites that scale with your brand."
         keywords="tailsgate, build websites for businesses, custom web development, SMB website, Next.js, React, professional web design"
       />
-      {/* Hero Section */}
-      <section className="min-h-screen flex flex-col items-center justify-center px-6 md:px-12 relative overflow-hidden">
-        {/* Subtle gradient background */}
-        <div className="absolute inset-0 hero-gradient pointer-events-none" />
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-center z-10 max-w-4xl mx-auto"
-        >
-          <Logo size="hero" className="mb-12" />
-
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-5xl lg:text-7xl font-semibold tracking-tight text-foreground mb-6"
-          >
-            Crafting Digital Solutions for Growing Businesses
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto"
-          >
-            Professional websites that scale with your business.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <Button variant="hero" size="xl" asChild>
-              <Link to="/contact">Start Your Project</Link>
-            </Button>
-            <Button variant="heroOutline" size="xl" asChild>
-              <Link to="/services">View Services</Link>
-            </Button>
-          </motion.div>
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 0.8 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-            className="w-6 h-10 border-2 border-foreground/30 rounded-full flex justify-center pt-2"
-          >
-            <div className="w-1.5 h-1.5 bg-foreground/50 rounded-full" />
-          </motion.div>
-        </motion.div>
-      </section>
+      {/* Hero Section - Now with premium animations */}
+      <AnimatedHero />
 
       {/* Services Section */}
       <section className="section-padding bg-muted/30">
