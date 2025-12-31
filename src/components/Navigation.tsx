@@ -42,11 +42,11 @@ const Navigation = () => {
       <nav className="max-w-[1200px] mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
-          <img
+          {/* <img
             src={tailsgateLogo}
             alt="Tailsgate"
             className="w-10 h-10 object-contain transition-transform duration-300 group-hover:scale-105"
-          />
+          /> */}
           <span className="font-display font-semibold text-foreground tracking-[0.15em] text-sm hidden sm:block">
             TAILSGATE
           </span>
