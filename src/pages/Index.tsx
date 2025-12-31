@@ -7,6 +7,7 @@ import ServiceCard from "@/components/ServiceCard";
 import ExpertiseStat from "@/components/ExpertiseStat";
 import TestimonialCard from "@/components/TestimonialCard";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 
 const services = [
   {
@@ -31,6 +32,10 @@ const expertise = [
   "100% Responsive",
   "SEO Optimized",
   "AWS Certified",
+  "Performance Tuned",
+  "Accessible Design",
+  "Scalable Architecture",
+  "Modern Tech Stack",
 ];
 
 const testimonials = [
@@ -49,6 +54,11 @@ const testimonials = [
 const Index = () => {
   return (
     <Layout>
+      <SEO
+        title="Tailsgate - Build Professional Websites for Businesses"
+        description="Expert web development services for growing businesses. We build high-performance, responsive websites that scale with your brand."
+        keywords="tailsgate, build websites for businesses, custom web development, SMB website, Next.js, React, professional web design"
+      />
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col items-center justify-center px-6 md:px-12 relative overflow-hidden">
         {/* Subtle gradient background */}

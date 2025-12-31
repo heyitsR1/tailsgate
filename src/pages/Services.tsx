@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Code, ShoppingBag, Shield, MessageSquare, Check, ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 
 const services = [
   {
@@ -62,6 +63,12 @@ const services = [
 const Services = () => {
   return (
     <Layout>
+      <SEO
+        title="Web Development Services - Tailsgate"
+        description="Comprehensive web development services including custom websites, e-commerce solutions, and technical maintenance."
+        keywords="web development services, e-commerce, custom websites, technical consulting, website maintenance"
+        url="https://tailsgate.com/services"
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6 md:px-12">
         <div className="max-w-[1200px] mx-auto">
@@ -185,9 +192,9 @@ const Services = () => {
             <p className="text-background/70 text-lg mb-8 max-w-xl mx-auto">
               Contact us today for a free consultation and project estimate.
             </p>
-            <Button 
-              variant="outline" 
-              size="xl" 
+            <Button
+              variant="outline"
+              size="xl"
               className="border-background text-background hover:bg-background hover:text-foreground"
               asChild
             >

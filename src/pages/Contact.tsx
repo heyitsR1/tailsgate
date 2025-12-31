@@ -2,10 +2,17 @@ import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Linkedin, Github } from "lucide-react";
 import Layout from "@/components/Layout";
 import ContactForm from "@/components/ContactForm";
+import SEO from "@/components/SEO";
 
 const Contact = () => {
   return (
     <Layout>
+      <SEO
+        title="Contact Tailsgate - Start Your Project"
+        description="Get in touch with Tailsgate to start your next web project. We are ready to help you grow your business."
+        keywords="contact tailsgate, hire web developer, start project, web design quote"
+        url="https://tailsgate.com/contact"
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-12 px-6 md:px-12">
         <div className="max-w-[1200px] mx-auto">
@@ -38,9 +45,9 @@ const Contact = () => {
               <h2 className="text-display-sm font-semibold text-foreground mb-8">
                 Let's Talk
               </h2>
-              
+
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Whether you have a project in mind or just want to explore possibilities, 
+                Whether you have a project in mind or just want to explore possibilities,
                 we're here to help. Fill out the form and we'll get back to you within 24 hours.
               </p>
 
@@ -82,18 +89,18 @@ const Contact = () => {
               <div>
                 <p className="text-sm text-muted-foreground mb-4">Connect with us</p>
                 <div className="flex gap-4">
-                  <a 
-                    href="https://linkedin.com" 
-                    target="_blank" 
+                  <a
+                    href="https://linkedin.com"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-lg border border-foreground/20 flex items-center justify-center hover:bg-steel-blue hover:border-steel-blue hover:text-off-white transition-all duration-300"
                     aria-label="LinkedIn"
                   >
                     <Linkedin size={20} />
                   </a>
-                  <a 
-                    href="https://github.com" 
-                    target="_blank" 
+                  <a
+                    href="https://github.com"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-lg border border-foreground/20 flex items-center justify-center hover:bg-steel-blue hover:border-steel-blue hover:text-off-white transition-all duration-300"
                     aria-label="GitHub"

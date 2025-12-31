@@ -4,6 +4,7 @@ import { Award, Users, Zap } from "lucide-react";
 import Layout from "@/components/Layout";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 
 const milestones = [
   { year: "2024", title: "Founded", description: "Tailsgate was established with a mission to help SMBs grow online." },
@@ -32,6 +33,12 @@ const values = [
 const About = () => {
   return (
     <Layout>
+      <SEO
+        title="About Tailsgate - Our Mission & Expertise"
+        description="Learn about Tailsgate, a web development agency focussed on speed, performance and client success."
+        keywords="about tailsgate, web agency mission, web development team, skilled developers"
+        url="https://tailsgate.com/about"
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6 md:px-12">
         <div className="max-w-[1200px] mx-auto">
@@ -45,12 +52,12 @@ const About = () => {
                 About Tailsgate
               </h1>
               <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-                We're a focused web development agency helping small and mid-sized businesses 
+                We're a focused web development agency helping small and mid-sized businesses
                 establish a powerful online presence.
               </p>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Founded by a Computer Science graduate with AWS certifications, we combine 
-                technical expertise with a deep understanding of business needs to deliver 
+                Founded by a Computer Science graduate with AWS certifications, we combine
+                technical expertise with a deep understanding of business needs to deliver
                 websites that truly work for you.
               </p>
               <Button variant="hero" size="lg" asChild>
@@ -143,17 +150,15 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`relative flex items-center ${
-                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  }`}
+                  className={`relative flex items-center ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                    }`}
                 >
                   {/* Timeline dot */}
                   <div className="absolute left-4 md:left-1/2 w-3 h-3 rounded-full bg-steel-blue transform md:-translate-x-1/2" />
 
                   {/* Content */}
-                  <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${
-                    index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16"
-                  }`}>
+                  <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16"
+                    }`}>
                     <span className="text-steel-blue font-semibold text-lg">{milestone.year}</span>
                     <h3 className="text-xl font-semibold text-foreground mt-1 mb-2">{milestone.title}</h3>
                     <p className="text-muted-foreground">{milestone.description}</p>
@@ -196,7 +201,7 @@ const About = () => {
               AWS Certified • Computer Science Graduate • Full-Stack Developer
             </p>
             <p className="text-foreground/70 leading-relaxed">
-              Passionate about building reliable, scalable web solutions for businesses 
+              Passionate about building reliable, scalable web solutions for businesses
               that want to make an impact online.
             </p>
           </motion.div>
@@ -218,9 +223,9 @@ const About = () => {
             <p className="text-background/70 text-lg mb-8 max-w-xl mx-auto">
               Ready to take your business online? We'd love to hear about your project.
             </p>
-            <Button 
-              variant="outline" 
-              size="xl" 
+            <Button
+              variant="outline"
+              size="xl"
               className="border-background text-background hover:bg-background hover:text-foreground"
               asChild
             >
