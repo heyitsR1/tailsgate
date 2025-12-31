@@ -53,7 +53,7 @@ const Index = () => {
       <section className="min-h-screen flex flex-col items-center justify-center px-6 md:px-12 relative overflow-hidden">
         {/* Subtle gradient background */}
         <div className="absolute inset-0 hero-gradient pointer-events-none" />
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -61,7 +61,7 @@ const Index = () => {
           className="text-center z-10 max-w-4xl mx-auto"
         >
           <Logo size="hero" className="mb-12" />
-          
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ const Index = () => {
           >
             Crafting Digital Solutions for Growing Businesses
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -79,7 +79,7 @@ const Index = () => {
           >
             Professional websites that scale with your business.
           </motion.p>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -166,8 +166,8 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center"
           >
-            <Link 
-              to="/about" 
+            <Link
+              to="/about"
               className="inline-flex items-center gap-2 text-steel-blue font-medium hover:gap-3 transition-all duration-300"
             >
               View Case Studies
@@ -217,9 +217,9 @@ const Index = () => {
             <p className="text-background/70 text-lg mb-8 max-w-xl mx-auto">
               Let's create something exceptional together. Start your project today.
             </p>
-            <Button 
-              variant="outline" 
-              size="xl" 
+            <Button
+              variant="outline"
+              size="xl"
               className="border-background text-background hover:bg-background hover:text-foreground"
               asChild
             >
