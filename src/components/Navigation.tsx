@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import tailsgateLogo from "@/assets/tailsgate-logo.png";
+import tailsgateLogo from "@/assets/tailsgate_logo_svg.svg";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -34,18 +34,17 @@ const Navigation = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-background/95 backdrop-blur-md border-b border-foreground/10" 
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? "bg-background/95 backdrop-blur-md border-b border-foreground/10"
+        : "bg-transparent"
+        }`}
     >
       <nav className="max-w-[1200px] mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
-          <img 
-            src={tailsgateLogo} 
-            alt="Tailsgate" 
+          <img
+            src={tailsgateLogo}
+            alt="Tailsgate"
             className="w-10 h-10 object-contain transition-transform duration-300 group-hover:scale-105"
           />
           <span className="font-display font-semibold text-foreground tracking-[0.15em] text-sm hidden sm:block">
@@ -59,17 +58,15 @@ const Navigation = () => {
             <Link
               key={link.href}
               to={link.href}
-              className={`text-sm font-medium transition-colors duration-200 relative group ${
-                location.pathname === link.href 
-                  ? "text-steel-blue" 
-                  : "text-foreground/70 hover:text-foreground"
-              }`}
+              className={`text-sm font-medium transition-colors duration-200 relative group ${location.pathname === link.href
+                ? "text-steel-blue"
+                : "text-foreground/70 hover:text-foreground"
+                }`}
             >
               {link.label}
-              <span 
-                className={`absolute -bottom-1 left-0 h-0.5 bg-steel-blue transition-all duration-300 ${
-                  location.pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
-                }`}
+              <span
+                className={`absolute -bottom-1 left-0 h-0.5 bg-steel-blue transition-all duration-300 ${location.pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
               />
             </Link>
           ))}
@@ -103,11 +100,10 @@ const Navigation = () => {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className={`text-lg font-medium py-2 ${
-                    location.pathname === link.href 
-                      ? "text-steel-blue" 
-                      : "text-foreground/70"
-                  }`}
+                  className={`text-lg font-medium py-2 ${location.pathname === link.href
+                    ? "text-steel-blue"
+                    : "text-foreground/70"
+                    }`}
                 >
                   {link.label}
                 </Link>

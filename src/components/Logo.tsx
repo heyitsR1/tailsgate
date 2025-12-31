@@ -17,18 +17,18 @@ const sizeMap = {
 
 const Logo = ({ size = "md", showText = false, className = "" }: LogoProps) => {
   return (
-    <motion.div 
+    <motion.div
       className={`flex flex-col items-center gap-4 ${className}`}
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <div className="relative">
-        <img 
-          src={tailsgateLogo} 
-          alt="Tailsgate Logo" 
+        <img
+          src={tailsgateLogo}
+          alt="Tailsgate Logo"
           className={`${sizeMap[size]} object-contain`}
-          style={{ 
+          style={{
             mixBlendMode: 'multiply',
             filter: 'contrast(1.05)'
           }}

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Linkedin, Github, Mail } from "lucide-react";
-import tailsgateLogo from "@/assets/tailsgate-logo.png";
+import tailsgateLogo from "@/assets/tailsgate_logo_svg.svg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,9 +12,9 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="md:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-4">
-              <img 
-                src={tailsgateLogo} 
-                alt="Tailsgate" 
+              <img
+                src={tailsgateLogo}
+                alt="Tailsgate"
                 className="w-10 h-10 object-contain invert"
               />
               <span className="font-display font-semibold tracking-[0.15em] text-sm">
@@ -22,7 +22,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-background/70 max-w-sm leading-relaxed">
-              Crafting professional websites for small and mid-sized businesses. 
+              Crafting professional websites for small and mid-sized businesses.
               We build digital solutions that scale with your growth.
             </p>
           </div>
@@ -42,25 +42,25 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-sm tracking-wide uppercase">Connect</h4>
             <div className="flex gap-4">
-              <a 
-                href="https://linkedin.com" 
-                target="_blank" 
+              <a
+                href="https://linkedin.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-background hover:text-foreground transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
               </a>
-              <a 
-                href="https://github.com" 
-                target="_blank" 
+              <a
+                href="https://github.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-background hover:text-foreground transition-colors"
                 aria-label="GitHub"
               >
                 <Github size={18} />
               </a>
-              <a 
+              <a
                 href="mailto:hello@tailsgate.com"
                 className="w-10 h-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-background hover:text-foreground transition-colors"
                 aria-label="Email"
