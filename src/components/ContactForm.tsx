@@ -2,23 +2,12 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Send, CheckCircle } from "lucide-react";
+import { useForm, ValidationError } from '@formspree/react';
 
 const ContactForm = () => {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [state, handleSubmit] = useForm("xnjnpwqd");
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsLoading(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsLoading(false);
-    setIsSubmitted(true);
-  };
-
-  if (isSubmitted) {
+  if (state.succeeded) {
     return (
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
@@ -27,7 +16,7 @@ const ContactForm = () => {
       >
         <CheckCircle className="w-16 h-16 text-steel-blue mx-auto mb-4" />
         <h3 className="text-2xl font-semibold mb-2 text-foreground">Thank you!</h3>
-        <p className="text-muted-foreground">We'll get back to you within 24 hours.</p>
+        <p className="text-muted-foreground">Your message has been sent! Our team will get back to you within 24 hours.</p>
       </motion.div>
     );
   }
@@ -47,6 +36,7 @@ const ContactForm = () => {
             className="w-full px-4 py-3 bg-card border border-foreground/20 rounded-lg focus:border-steel-blue focus:ring-1 focus:ring-steel-blue outline-none transition-colors text-foreground"
             placeholder="John Doe"
           />
+          <ValidationError prefix="Name" field="name" errors={state.errors} />
         </div>
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
@@ -60,9 +50,10 @@ const ContactForm = () => {
             className="w-full px-4 py-3 bg-card border border-foreground/20 rounded-lg focus:border-steel-blue focus:ring-1 focus:ring-steel-blue outline-none transition-colors text-foreground"
             placeholder="john@example.com"
           />
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
         </div>
       </div>
-      
+
       <div>
         <label htmlFor="budget" className="block text-sm font-medium text-foreground mb-2">
           Budget Range
@@ -79,6 +70,7 @@ const ContactForm = () => {
           <option value="20k+">$20,000+</option>
           <option value="custom">Custom / Let's Discuss</option>
         </select>
+        <ValidationError prefix="Budget" field="budget" errors={state.errors} />
       </div>
 
       <div>
@@ -93,10 +85,11 @@ const ContactForm = () => {
           className="w-full px-4 py-3 bg-card border border-foreground/20 rounded-lg focus:border-steel-blue focus:ring-1 focus:ring-steel-blue outline-none transition-colors resize-none text-foreground"
           placeholder="Tell us about your project..."
         />
+        <ValidationError prefix="Message" field="message" errors={state.errors} />
       </div>
 
-      <Button type="submit" variant="hero" size="lg" className="w-full" disabled={isLoading}>
-        {isLoading ? (
+      <Button type="submit" variant="hero" size="lg" className="w-full" disabled={state.submitting}>
+        {state.submitting ? (
           "Sending..."
         ) : (
           <>

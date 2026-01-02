@@ -49,7 +49,7 @@ const AnimatedHero = () => {
             <GradientMesh interactive />
 
             {/* Floating code particles - increased count for visibility */}
-            <FloatingParticles count={10} />
+            <FloatingParticles count={5} />
 
             {/* Main content with scroll-based parallax */}
             <motion.div
@@ -110,7 +110,8 @@ const AnimatedHero = () => {
                         className="group relative overflow-hidden"
                     >
                         <Link to="/contact">
-                            <span className="relative z-10">Start Your Project</span>
+                            {/* <span className="relative z-10">Start Your Project</span> */}
+                            <span className="relative z-10">Get a Free Quote</span>
                             <motion.div
                                 className="absolute inset-0 bg-gradient-to-r from-steel-blue to-pale-cyan opacity-0 group-hover:opacity-20 transition-opacity duration-300"
                             />
