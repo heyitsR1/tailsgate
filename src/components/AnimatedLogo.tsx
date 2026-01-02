@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import tailsgateLogo from "@/assets/tailsgate_solutions.svg";
+import tailsgateLogo from "@/assets/tailsgate-logo.png";
 
 interface AnimatedLogoProps {
     size?: "sm" | "md" | "lg" | "xl" | "hero";
